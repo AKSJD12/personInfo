@@ -1,83 +1,77 @@
 /**
  * 个人介绍网站 — 数据中心
  * 集中管理所有个人信息，修改此文件即可更新全站内容
+ * 注：个人信息已做脱敏处理
  */
 
 export const profile = {
-  // ---- 基本信息 ----
-  name: '张三',
-  title: '全栈开发工程师',
-  subtitle: '热爱技术 · 专注Java生态与前端开发 · 终身学习者',
+  // ---- 基本信息（已脱敏）----
+  name: '杨同学',
+  title: 'Java 后端开发工程师',
+  subtitle: '软件工程本科 · 热爱技术 · 持续学习',
 
-  // ---- 头像（先留空，后续替换为真实图片路径）----
+  // ---- 头像（先留空）----
   avatar: '',
 
   // ---- 关于我 ----
   bio: [
-    '我是一名拥有5年经验的全栈开发工程师，擅长 Java 生态和现代前端技术。曾主导多个企业级项目从0到1的架构设计与落地交付，对代码质量和工程效率有极致的追求。',
-    '技术栈涵盖 Spring Boot、MyBatis、React、Vue 等领域，对数据库设计和系统性能优化有深入理解。热衷于开源社区，保持持续学习的技术热情。',
-    '业余时间喜欢写技术博客，在掘金和 GitHub 上分享自己的项目经验。我相信优秀的代码来自清晰的思考和持续的迭代。',
+    '我是2025届软件工程专业应届毕业生，主攻 Java 后端开发方向。在校期间系统学习了数据结构、计算机网络、操作系统等基础课程，并通过多个实战项目积累了扎实的工程能力。',
+    '技术栈以 Java 为核心，熟悉 Spring Boot、Spring Cloud Alibaba 等主流框架的使用，理解 IoC / AOP 思想以及微服务架构的设计理念。具备 MySQL 索引调优、Redis 缓存设计、RocketMQ 消息队列等实际应用经验。',
+    '曾在科技公司担任后端开发实习生，主导了赛事管理小程序的业务主流程设计与支付模块对接。乐于通过博客和开源项目分享技术思考，希望成为一名优秀的后端工程师。',
   ],
 
   // ---- 数据统计 ----
   stats: [
-    { label: '工作经验', value: 5, suffix: '年+' },
-    { label: '完成项目', value: 20, suffix: '+' },
-    { label: '获得奖项', value: 3, suffix: '个' },
-    { label: '开源贡献', value: 50, suffix: '+' },
+    { label: '实习经历', value: 1, suffix: '段' },
+    { label: '项目经验', value: 3, suffix: '个' },
+    { label: '技术方向', value: 7, suffix: '+' },
+    { label: '开源项目', value: 1, suffix: '个' },
   ],
 
   // ---- 技能列表 ----
   skills: [
-    { name: 'Java', level: 95, icon: '☕' },
-    { name: 'Spring Boot', level: 90, icon: '🍃' },
-    { name: 'MySQL', level: 85, icon: '🗄️' },
-    { name: 'React', level: 80, icon: '⚛️' },
-    { name: 'Vue', level: 82, icon: '💚' },
-    { name: 'Docker', level: 75, icon: '🐳' },
-    { name: 'Python', level: 70, icon: '🐍' },
-    { name: 'Redis', level: 78, icon: '🔴' },
-    { name: 'Git', level: 88, icon: '🔀' },
+    { name: 'Java',           level: 85, icon: '☕' },
+    { name: 'Spring Boot',    level: 85, icon: '🍃' },
+    { name: 'MySQL',          level: 80, icon: '🗄️' },
+    { name: 'Redis',          level: 80, icon: '🔴' },
+    { name: 'Spring Cloud',   level: 75, icon: '☁️' },
+    { name: 'MyBatis',        level: 82, icon: '🔗' },
+    { name: 'RabbitMQ',       level: 70, icon: '🐇' },
+    { name: 'RocketMQ',       level: 68, icon: '🚀' },
+    { name: 'Nginx',          level: 65, icon: '🌐' },
   ],
 
   // ---- 项目经历 ----
   projects: [
     {
-      title: '企业OA办公系统',
-      description: '基于 Spring Boot + Vue 的全栈办公自动化平台，集成流程审批、文档管理、即时通讯等模块，支撑 200+ 用户日常使用。',
-      tags: ['Java', 'Spring Boot', 'Vue', 'MySQL'],
+      title: '爱台球 — 赛事管理小程序',
+      description: '基于 Spring Boot 3 + MySQL + Redis + MyBatis-Plus 的台球俱乐部赛事管理平台。采用工厂模式+策略模式设计赛制引擎，支持单败/双败等多种赛程推进；集成微信 JSAPI 支付实现完整的支付闭环；设计身份核验功能，通过乐观锁解决多人协作审核的并发冲突。',
+      tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', '微信支付'],
       link: '#',
       image: '',
     },
     {
-      title: '电商数据分析平台',
-      description: '使用 React + ECharts 构建的数据可视化看板，实时展示订单趋势、用户行为漏斗、库存预警等核心业务指标。',
-      tags: ['React', 'ECharts', 'Python', 'Redis'],
+      title: '智行顺风车',
+      description: '基于 Spring Boot + SpringCloud Alibaba 的顺风车出行小程序后端。对接百度地图和 OCR 服务实现司机实名认证；基于 Redis GEO 实现乘客-司机路径匹配度计算与推荐；通过 RabbitMQ 延迟队列 + 死信交换机实现邀请超时自动取消；采用装饰者模式设计行程计费规则，遵循开闭原则灵活扩展。',
+      tags: ['Java', 'Spring Cloud', 'Redis', 'RabbitMQ', 'FastDFS'],
       link: '#',
       image: '',
     },
     {
-      title: '微服务网关中间件',
-      description: '基于 Spring Cloud Gateway 二次开发的 API 网关，实现动态路由、限流熔断、统一鉴权等功能，已开源至 GitHub。',
-      tags: ['Java', 'Spring Cloud', 'Docker', 'Nacos'],
-      link: '#',
-      image: '',
-    },
-    {
-      title: '个人博客系统',
-      description: '前后端分离的个人技术博客，支持 Markdown 编辑、标签分类、全文搜索，服务端渲染提升 SEO 效果。',
-      tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
+      title: '手写 RPC 框架',
+      description: '基于 Java + Etcd + Vert.x + 自定义协议实现的轻量级 RPC 框架。通过 JDK 动态代理实现远程方法无感知调用；基于 Etcd 租约 + Watch 机制实现服务注册与健康检测；内置 JDK / JSON / Kryo / Hessian 四种序列化器；支持随机、轮询、一致性 Hash 三种负载均衡及 FailFast / FailSafe 等四种容错策略。',
+      tags: ['Java', 'Etcd', 'Vert.x', 'SPI', '动态代理'],
       link: '#',
       image: '',
     },
   ],
 
-  // ---- 联系方式 ----
+  // ---- 联系方式（已脱敏）----
   contact: {
-    email: 'zhangsan@example.com',
-    github: 'https://github.com/zhangsan',
-    juejin: 'https://juejin.cn/user/zhangsan',
-    linkedin: 'https://linkedin.com/in/zhangsan',
+    email: '264***@qq.com',
+    github: 'https://github.com/AKSJD12',
+    juejin: '#',
+    linkedin: '#',
   },
 
   // ---- 页脚 ----

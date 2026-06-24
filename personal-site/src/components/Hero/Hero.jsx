@@ -2,14 +2,14 @@ import { useEffect, useRef } from 'react';
 import styles from './Hero.module.css';
 import { useTypewriter } from '../../hooks/useTypewriter';
 
-const TYPING_TEXTS = [
-  '你好，我是张三',
-  '我是一名全栈工程师',
-  '我喜欢创造优雅的代码',
+const getTypingTexts = (name) => [
+  `你好，我是${name}`,
+  '我是一名 Java 后端开发工程师',
+  '热爱技术 · 专注底层 · 持续学习',
 ];
 
 export default function Hero({ name, title, subtitle, avatar }) {
-  const { text, isTyping } = useTypewriter(TYPING_TEXTS, 100, 2000);
+  const { text, isTyping } = useTypewriter(getTypingTexts(name), 100, 2000);
   const canvasRef = useRef(null);
 
   // 粒子背景
