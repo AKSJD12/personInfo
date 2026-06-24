@@ -96,7 +96,7 @@
 
 | 平台 | 地址 | 说明 |
 |------|------|------|
-| **Vercel** | `https://person-info-xxx.vercel.app` | 国际 CDN，需 VPN |
+| **Vercel** | https://person-info.vercel.app | 国际 CDN，需 VPN |
 | **GitHub Pages** | https://aksjd12.github.io/personInfo | 国内直连 |
 
 > 注：Vercel 地址在部署时自动生成，请在 Vercel Dashboard 中查看完整 URL。
