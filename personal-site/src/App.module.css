@@ -1,0 +1,69 @@
+/* ========================================
+   个人介绍网站 — App 布局样式
+   ======================================== */
+
+/* 通用模块容器 */
+.section {
+  min-height: 100vh;
+  padding: var(--spacing-xl) 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 内容区宽度限制 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  width: 100%;
+}
+
+/* 模块标题统一样式 */
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+/* 标题下装饰线 */
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-gradient);
+  margin: var(--spacing-sm) auto 0;
+  border-radius: 2px;
+}
+
+/* 滚动渐入动画 — 初始状态 */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 滚动渐入动画 — 可见状态 */
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 卡片基础样式 */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px var(--glow);
+  border-color: var(--accent-primary);
+}

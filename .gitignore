@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+personal-site/node_modules/
+
+# Build output
+dist/
+personal-site/dist/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+output.txt
+interview_test.png
+
+# Env files
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*

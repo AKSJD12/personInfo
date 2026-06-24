@@ -1,0 +1,23 @@
+.footer {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.divider {
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-lg);
+  height: 1px;
+  background: var(--border);
+}
+
+.text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.tech {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
