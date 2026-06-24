@@ -31,7 +31,7 @@ export default function Navigation({ name }) {
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
       <div className={styles.inner}>
         <a href="#hero" className={styles.logo} onClick={(e) => handleClick(e, 'hero')}>
-          {name}
+          个人简历
         </a>
         <ul className={styles.links}>
           {NAV_ITEMS.map(({ id, label }) => (
