@@ -1,24 +1,8 @@
-import { useRef } from 'react';
 import styles from './About.module.css';
-import { useCountUp } from '../../hooks/useCountUp';
 import { useReveal } from '../../hooks/useReveal';
 
-function StatCard({ label, value, suffix }) {
-  const { ref, isVisible } = useReveal();
-  const count = useCountUp(value, 2000, isVisible);
-
-  return (
-    <div ref={ref} className={styles.statCard}>
-      <span className={styles.statValue}>
-        {count}{suffix}
-      </span>
-      <span className={styles.statLabel}>{label}</span>
-    </div>
-  );
-}
-
 export default function About({ bio, stats }) {
-  const sectionRef = useReveal();
+  const { ref, isVisible } = useReveal();
 
   return (
     <section id="about" className="section">
@@ -27,16 +11,19 @@ export default function About({ bio, stats }) {
 
         <div className={styles.grid}>
           {/* 左侧：自我介绍 */}
-          <div ref={sectionRef} className={styles.bio}>
-            {bio.map((paragraph, i) => (
-              <p key={i} className={styles.bioText}>{paragraph}</p>
+          <div ref={ref} className={`${styles.bio} ${isVisible ? styles.visible : ''}`}>
+            {bio.map((para, i) => (
+              <p key={i} className={styles.text}>{para}</p>
             ))}
           </div>
 
-          {/* 右侧：数据统计 */}
+          {/* 右侧：数据 */}
           <div className={styles.stats}>
-            {stats.map((stat) => (
-              <StatCard key={stat.label} {...stat} />
+            {stats.map((s) => (
+              <div key={s.label} className={styles.stat}>
+                <span className={styles.statValue}>{s.value}{s.suffix}</span>
+                <span className={styles.statLabel}>{s.label}</span>
+              </div>
             ))}
           </div>
         </div>
